@@ -24,7 +24,8 @@ module Secured
     if SCOPES[request.env['PATH_INFO']] === nil
       true
     else
-      (String(@auth_payload['scope']).split(' ') & (SCOPES[request.env['PATH_INFO']])).any?.
+      (String(@auth_payload['scope']).split(' ') & (SCOPES[request.env['PATH_INFO']])).any?
+    end
   end
 
   def http_token
