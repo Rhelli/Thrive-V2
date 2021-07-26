@@ -1,5 +1,4 @@
-class Api::V1::UsersController < ApplicationController
-  include Secured
+class Api::V1::UsersController < SecuredController
 
   def index
     @users = User.all
